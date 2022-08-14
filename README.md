@@ -1,4 +1,14 @@
 # Whale Finder v1.0.1
+# V.1.0.1 Screenshots
+## Default Token Section
+![defaultTokens](https://user-images.githubusercontent.com/48108872/184550464-46255d50-391a-4251-bddc-4c87deda6865.png)
+## Gui for pc
+
+![gui_pc](https://user-images.githubusercontent.com/48108872/184550475-9cc6ab02-0cb4-499e-ad6f-7d62932dfd5d.png)
+## Gui for mobile devices
+
+![gui_phone](https://user-images.githubusercontent.com/48108872/184550483-a512c7cb-ff5c-48bf-b5e3-56268c85d454.png)
+
 # What Is New in Whale Finder v1.0.1?
 You can load default tokens(bnb and usdt in this version) as chosing them by select element of html on main page.This functionality saves your time as preventing  the need for searching for finding usdt or bnb contracts on etherscan or another ethereum blockchain in order to find a whale involved one of these two tokens.Also a better gui for both pc and phone version comes and use mobile version section removes with Whale Finder v1.0.1.It uses same gui for both versions.If you want to chose another token the instructions from last version are still aplied to track other tokens' whales,look at Explanation Of Classical Method From v.1.0.0 but do not use usdt with old instructions just chose it from default tokens.Use method,that explained below, only to search another token's whale.
 
@@ -26,5 +36,4 @@ And here is the computer version:
 ![instruction7](https://user-images.githubusercontent.com/48108872/181064139-3e10e2ad-cfd0-49bb-b53f-f8da4a8b71a8.png)
 ![instruction10](https://user-images.githubusercontent.com/48108872/181064652-3915653d-0b05-45c4-bd13-673c9ad230c7.png)
 For being able to view transactions please click on F12 on your computer than select console section.And here we go, now we view the whale transactions🙂
-
 
