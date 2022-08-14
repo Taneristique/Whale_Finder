@@ -1,5 +1,5 @@
 import React from 'react';
-import ErrorPage from './component/ErrorPage';
+
 export default class WhaleFinder extends React.Component{
     constructor(props){
         super(props)
@@ -12,71 +12,52 @@ export default class WhaleFinder extends React.Component{
         const contract = new Contract(CONTRACT_ADDRESS,CONTRACT_ABI,provider)
         /*Set Tracker And Device Settings */
         const TRANSFER_TRESHOLD=props.transferTreshold
-        const checkMobile=props.check
         this.state={
             contract:contract,
-            checkMobile:checkMobile,
             transferTreshold:TRANSFER_TRESHOLD,
             error_info:'',
-            hasError:false
+            hasError:false,
         }
     }
     
     
     /*Listen Transactions On Ethereum Blockchain */
-    main=async(isMobile)=>{
-        try{
+    main=async()=>{
         const Name=await this.state.contract.name()
         console.log(`Whale Tracker Started\n Listening for large transfers on ${Name}`)
         this.state.contract.on('Transfer',(from,to,amount,data)=>
         {
         if(amount.toNumber()>=this.state.transferTreshold){
-            if(isMobile===1){
-                document.body.style.backgroundColor = "black"
-                document.body.style.color="#FEF2F2"
-                document.body.style.textAlign = "center"
-                document.write(`New Whale Transfer for  ${Name} : https://etherscan.io/tx/${data.transactionHash} <br/> `)
-            }
-            else{
-                console.log(`New Whale Transfer for  ${Name} : https://etherscan.io/tx/${data.transactionHash}`)
-                console.log(from,to,amount,data)
-            }
-            }
-        })}
-        catch(error){
-            this.setState({error_info:error,hasError:true})
-            return 0
-        }
+                let newElem=""
+                let element = "";
+                let node=""
+                newElem=document.createElement('p');
+                node=document.createTextNode(`🚨New whale transaction founded at\nhttps://etherscan.io/tx/${data.transactionHash}\n\n${from}\n sent to \n${to} \n${amount.toNumber()} ${Name}\n\n`)
+                newElem.appendChild(node);
+                element = document.getElementById("investigate");
+                element.appendChild(newElem);
+                            }
+        })
     }
-    device_type=()=>{
-        if(this.state.hasError===true){
-            console.log(this.state.error_info)
-            return 0
-        }
-        else if(this.state.checkMobile===1){
-            this.main(1)
-        }
-        else{
-            this.main(0)
-        }
+    execute=()=>{
+         
+                this.main()
+            
     }
-
+    
     render(){
         return(
-            this.device_type()===0?
-            <ErrorPage></ErrorPage> 
-            :
-            this.state.checkMobile!==1?
-            <div className='bg-black w-screen h-screen text-center  text-red-50  grid place-content-center ...'>
-                <p>Request validated!Check your console for finding crypto whales pressing F12 button.</p> 
-                 {this.device_type()}
+         
+            <div id="execute"  className='  w-auto h-auto text-red-50 text-center'>
+                <h1 className="text-2xl bg-green-300 italic text-black ">WhaleFinder</h1>
+                <span className=' text-red-50 w-80   break-words ...  text-center whitespace-pre-wrap ' id="investigate"> 
+                
+                </span>
+                     {this.execute()}
+               
             </div>
-            :
-                this.device_type()
+            
         )
     }
-
-   
-  
 }
 

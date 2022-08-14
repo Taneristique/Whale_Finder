@@ -1,9 +1,19 @@
-# Whale Finder v1.0.0
-This version only supports ethereum network and ERC20 tokens.Here is how it works let assume that we want to find the whales who transfers 100000 or more usdt 
-on blockchain.In this scenario,we will start opening token page of usdt on etherscan : https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7
-![instruction1](https://user-images.githubusercontent.com/48108872/181045686-42836e0a-6893-4d3b-b200-672779c44739.png)
+# Whale Finder v1.0.1
+# V.1.0.1 Screenshots
+## Default Token Section
+![defaultTokens](https://user-images.githubusercontent.com/48108872/184550464-46255d50-391a-4251-bddc-4c87deda6865.png)
+## Gui for pc
 
+![gui_pc](https://user-images.githubusercontent.com/48108872/184550475-9cc6ab02-0cb4-499e-ad6f-7d62932dfd5d.png)
+## Gui for mobile devices
 
+![gui_phone](https://user-images.githubusercontent.com/48108872/184550483-a512c7cb-ff5c-48bf-b5e3-56268c85d454.png)
+
+# What Is New in Whale Finder v1.0.1?
+You can load default tokens(bnb and usdt in this version) as chosing them by select element of html on main page.This functionality saves your time as preventing  the need for searching for finding usdt or bnb contracts on etherscan or another ethereum blockchain in order to find a whale involved one of these two tokens.Also a better gui for both pc and phone version comes and use mobile version section removes with Whale Finder v1.0.1.It uses same gui for both versions.If you want to chose another token the instructions from last version are still aplied to track other tokens' whales,look at Explanation Of Classical Method From v.1.0.0 but do not use usdt with old instructions just chose it from default tokens.Use method,that explained below, only to search another token's whale.
+
+# Explanation Of Classical Method From v.1.0.0
+Here is how it works let assume that we want to find the whales who transfers 100000 or more usdt on blockchain.In this scenario,we will start opening token page of usdt on etherscan : https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7
 Than we have to copy token address which is selected with blue color. 
 
 
@@ -27,74 +37,3 @@ And here is the computer version:
 ![instruction10](https://user-images.githubusercontent.com/48108872/181064652-3915653d-0b05-45c4-bd13-673c9ad230c7.png)
 For being able to view transactions please click on F12 on your computer than select console section.And here we go, now we view the whale transactions🙂
 
-## Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
